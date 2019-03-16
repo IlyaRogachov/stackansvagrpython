@@ -28,6 +28,7 @@ In this case has been used:
 
 Ansible
 Jenkins (admin/admin) 192.168.56.85:8080
+http://192.168.56.85:8080/job/Deploy/
 Kubernetes
 Docker
 

@@ -61,28 +61,28 @@
   shell: |
    cd /home && ./batch-install-jenkins-plugins.sh --plugins fileplug  --plugindir /var/lib/jenkins/plugins/
 
-- name: Creates directory Build
-  file:
-    path: /var/lib/jenkins/jobs/Build
-    state: directory
-    owner: jenkins
-    group: jenkins
-    mode: 0775
+   #- name: Creates directory Build
+   #file:
+   # path: /var/lib/jenkins/jobs/Build
+   # state: directory
+   # owner: jenkins
+   # group: jenkins
+   # mode: 0775
 
-- name: Creates directory Builds
-  file:
-    path: /var/lib/jenkins/jobs/Build/build
-    state: directory
-    owner: jenkins 
-    group: jenkins 
-    mode: 0775
+   #- name: Creates directory Builds
+   #file:
+   # path: /var/lib/jenkins/jobs/Build/build
+   # state: directory
+   # owner: jenkins 
+   # group: jenkins 
+   # mode: 0775
 
-- copy:
-    src: "{{ role_path }}/files/config.xml"
-    dest: /var/lib/jenkins/jobs/Build/config.xml
-    owner: jenkins
-    group: jenkins
-    mode: 0755
+   #- copy:
+   # src: "{{ role_path }}/files/config.xml"
+   # dest: /var/lib/jenkins/jobs/Build/config.xml
+   # owner: jenkins
+   # group: jenkins
+   # mode: 0755
 
 - name: Creates directory Deploy
   file:

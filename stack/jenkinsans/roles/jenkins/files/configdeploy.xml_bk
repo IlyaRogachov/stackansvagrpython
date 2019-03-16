@@ -14,6 +14,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>#!/bin/bash
+sudo rm -rf /home/docker/repo/main
 sudo git clone https://github.com/IlyaRogachov/pythonwebdone.git  /home/docker/repo/main
 sudo cp /home/docker/repo/Dockerfile /home/docker/repo/main
 sudo docker build --no-cache -t hello/world /home/docker/repo/main
