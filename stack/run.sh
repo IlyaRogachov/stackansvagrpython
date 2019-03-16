@@ -1,8 +1,9 @@
 #!/bin/bash
-sudo sed -i  '/192.168.56.82 application.com/d' /etc/hosts
+echo 192.168.56.82 application.com >> /etc/hosts
+#sudo sed -i  '/192.168.56.82 application.com/d' /etc/hosts
 sudo chmod 700 ./templates/server_ca
 sudo chmod 700 ./jenkinsans/templates/server_ca
-echo 192.168.56.82 kuber.hello-world.com >> /etc/hosts
+echo 192.168.56.82 kuber.application.com >> /etc/hosts
 vagrant up
 sleep 1m
 cd ./own && ansible-playbook -i inventory.cfg playbook/ownrun.yaml

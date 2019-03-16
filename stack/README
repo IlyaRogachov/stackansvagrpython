@@ -1,3 +1,5 @@
+!!!!!!!!!!!!!!!!!!!!Before running the application do not forget create network for VirtualBox, script for creating network are located into root of repository "virtualboxnetwork.sh"
+
 Actually that is not best solution - in this case the best solution is creating jenkins with workers as part of cluster and run it as pod and sure use groovy, but sorry guys I do not have enough time for this.
 I have created application and use the faster solution  - not the best) 
 
