@@ -59,3 +59,30 @@ kubectl get nodes - cluster status
 kubectl get pods  - pods status
 kubectl get services - service status
 
+___________________________________________________________________________________
+###################################################################################
+
+Step by step process for running the application
+
+1) you need to install no your pc the following applications:
+
+ansible --version
+ansible 2.3.1.0
+
+Ubuntu 17.10
+
+VBoxManage --version
+5.1.34_Ubuntur121010
+
+vagrant -v
+Vagrant 2.0.4
+
+2) you need to create network for VirtualBox, you need to run script virtualboxnetwork.sh
+its located into the root of repository
+
+3) you need to run "run.sh" file and wait till process will be finished.
+
+4) you need to go to the Jenkins by  http://192.168.56.85:8080/job/Deploy/  (admin/admin) link and run build for building the
+application, that will create image from Dockerfile and push it to docker repositore
+
+5) then you need to go to application.com and you will be able to see runned application and test it
